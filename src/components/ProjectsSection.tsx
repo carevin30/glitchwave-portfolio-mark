@@ -1,39 +1,42 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Play, Volume2, Gamepad2 } from "lucide-react";
+import { Github, ExternalLink, CheckSquare, Calculator, UtensilsCrossed } from "lucide-react";
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "SynthWave Visualizer",
-      description: "Real-time audio visualizer with WebGL effects and beat detection. Features customizable color schemes and responsive particle systems that dance to the music.",
-      icon: Volume2,
-      tech: ["JavaScript", "WebGL", "Web Audio API", "Three.js"],
+      title: "Neon Todo List",
+      description: "A sleek and modern task management app with neon aesthetics. Features drag-and-drop functionality, priority levels, and smooth animations for an engaging user experience.",
+      icon: CheckSquare,
+      tech: ["React", "TypeScript", "Tailwind CSS", "Local Storage"],
       gradient: "from-neon-pink to-neon-purple",
       glowColor: "neon-glow",
       demo: true,
-      github: true
+      demoUrl: "https://neon-pink-groove-tasks.vercel.app/",
+      github: false
     },
     {
-      title: "Rhythm Playlist Manager",
-      description: "Smart playlist web app that analyzes song tempo and mood. Uses machine learning to create perfect workout, study, or chill playlists automatically.",
-      icon: Play,
-      tech: ["React", "Node.js", "Python", "Spotify API", "TensorFlow"],
+      title: "Math Magic Calculator",
+      description: "An elegant calculator with a beautiful pink-themed interface. Performs basic arithmetic operations with smooth animations and responsive design for all devices.",
+      icon: Calculator,
+      tech: ["JavaScript", "HTML5", "CSS3", "Responsive Design"],
       gradient: "from-neon-blue to-neon-cyan",
       glowColor: "neon-glow-blue",
       demo: true,
-      github: true
+      demoUrl: "https://fluffy-pink-math-magic-hr25.vercel.app/",
+      github: false
     },
     {
-      title: "Beat-Sync Game Engine",
-      description: "2D game engine where gameplay mechanics sync with background music. Features dynamic difficulty scaling based on song complexity and user performance.",
-      icon: Gamepad2,
-      tech: ["C++", "OpenGL", "FMOD", "Lua Scripting"],
+      title: "Food Voyage Ordering",
+      description: "A comprehensive food ordering platform with menu browsing, cart management, and order tracking. Features a modern UI with seamless user experience.",
+      icon: UtensilsCrossed,
+      tech: ["React", "Node.js", "Express", "MongoDB"],
       gradient: "from-neon-green to-neon-blue",
       glowColor: "neon-glow-green",
-      demo: false,
-      github: true
+      demo: true,
+      demoUrl: "https://food-voyage-order.vercel.app/",
+      github: false
     }
   ];
 
@@ -96,6 +99,7 @@ const ProjectsSection = () => {
                     <Button 
                       size="sm" 
                       className="flex-1 bg-gradient-neon hover:opacity-90 transition-opacity"
+                      onClick={() => window.open(project.demoUrl, '_blank')}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Live Demo

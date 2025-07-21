@@ -61,7 +61,30 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Neon synthwave colors
+				neon: {
+					pink: 'hsl(var(--neon-pink))',
+					blue: 'hsl(var(--neon-blue))',
+					purple: 'hsl(var(--neon-purple))',
+					green: 'hsl(var(--neon-green))',
+					cyan: 'hsl(var(--neon-cyan))'
 				}
+			},
+			fontFamily: {
+				'space': ['Space Grotesk', 'sans-serif'],
+				'mono': ['JetBrains Mono', 'Monaco', 'Consolas', 'monospace']
+			},
+			backgroundImage: {
+				'gradient-neon': 'var(--gradient-neon)',
+				'gradient-cyber': 'var(--gradient-cyber)',
+				'gradient-music': 'var(--gradient-music)'
+			},
+			boxShadow: {
+				'neon': 'var(--glow-pink)',
+				'neon-blue': 'var(--glow-blue)',
+				'neon-purple': 'var(--glow-purple)',
+				'neon-green': 'var(--glow-green)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
